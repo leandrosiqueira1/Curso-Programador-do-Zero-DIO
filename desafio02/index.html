@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio02</title>
+</head>
+<body>
+    <h2>JavaScript For Loop</h2>
+
+<p id="demo3"></p>
+
+<script>
+
+const contVit = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
+const contDerr = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
+
+function sunWin(){
+      let sunWin = 0;
+for (let i = 0; i < contVit.length; i++) {
+  sunWin += Number(contVit[i]);
+}
+      return sunWin;
+}
+
+
+function sunDefeat(){
+      let sunDefeat = 0;
+for (let i = 0; i < contDerr.length; i++) {
+  sunDefeat += Number(contDerr[i]);
+}
+      return sunDefeat;
+}
+
+function ranking(v,d){
+
+      let wins = sunWin(v);
+    let defeat = sunDefeat(d);
+    rank = wins - defeat
+    return rank
+};
+
+const v = ranking();
+
+if(v <10){
+      let nivel = 1;
+  document.getElementById("demo3").innerHTML = `Heroi tem saldo ${v} está no Nivel ${nivel}`;
+
+}else if(v > 11 && v <=20){
+      let nivel = 2;
+      document.getElementById("demo3").innerHTML = `Heroi tem saldo ${v} está no Nivel ${nivel}`;
+}else if(v > 21 && v <=50){
+      let nivel = 3;
+      document.getElementById("demo3").innerHTML = `Heroi tem saldo ${v} está no Nivel ${nivel}`;
+}else if(v > 51 && v <=80){
+      let nivel = 4;
+      document.getElementById("demo3").innerHTML = `Heroi tem saldo ${v} está no Nivel ${nivel}`;
+}else if(v > 81 && v <=90){
+      let nivel = 5;
+      document.getElementById("demo3").innerHTML = `Heroi tem saldo ${v} está no Nivel ${nivel}`;
+}else if(v > 91 && v <=100){
+      let nivel = 6;
+      document.getElementById("demo3").innerHTML = `Heroi tem saldo ${v} está no Nivel ${nivel}`;
+}else if(v > 101){
+      let nivel = 7;
+      document.getElementById("demo3").innerHTML = `Heroi tem saldo ${v} está no Nivel ${nivel}`;
+}
+
+
+</script>
+
+</body>
+</html>
