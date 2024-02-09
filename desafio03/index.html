@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Desafio classe de um jogo</h2>
+
+<p>Personagens</p>
+
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
+
+<script>
+
+class personagem{
+      constructor(nome, idade, tipo){
+      this.nome = nome
+    this.idade = idade
+    this.tipo = tipo
+      }
+    ataque(){
+      if(this.tipo === "mago"){
+            return "magia";
+        }else if(this.tipo === "guerreiro"){
+            return "Espada";  
+        }else if(this.tipo === "monge"){
+            return "arte marciais";
+        }else if(this.tipo === "ninja"){
+            return "shuriken";
+        }
+    }
+}
+
+let mago = new personagem("Leandro", 36, "mago");
+let ninja = new personagem("Leandro",23,"ninja");
+let guerreiro = new personagem("Leandro",23,"guerreiro");
+let monge = new personagem("Leandro",23,"monge");
+
+
+document.getElementById("demo1").innerHTML = `O ${mago.tipo} atacou usando <strong> ${mago.ataque()}</strong>`;
+document.getElementById("demo2").innerHTML = `O ${ninja.tipo} atacou usando <strong> ${ninja.ataque()}</strong>`;
+document.getElementById("demo3").innerHTML = `O ${guerreiro.tipo} atacou usando <strong> ${guerreiro.ataque()}</strong>`;
+document.getElementById("demo4").innerHTML = `O ${monge.tipo} atacou usando <strong> ${monge.ataque()}</strong>`;
+</script>
+</body>
+</html>
